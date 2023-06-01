@@ -16,9 +16,9 @@ RT-Thread Nano 是一个极简版的硬实时内核，它是由 C 语言开发�
 
 **1、下载简单**
 
-RT-Thread Nano 以软件包的方式集成在 Keil MDK 与 CubeMX 中，可以直接在软件中下载 Nano 软件包获取源码，获取方式详见 [使用 KEIL MDK 移植 RT-Thread Nano](nano-port-keil/nano-port-keil.md) 与 [使用 CubeMX 移植 RT-Thread Nano](nano-port-cube/nano-port-cube.md) 。
+RT-Thread Nano 以软件包的方式集成在 Keil MDK 与 CubeMX 中，可以直接在软件中下载 Nano 软件包获取源码，获取方式详见 [基于 Keil MDK 移植 RT-Thread Nano](docs/nano-port-keil/an0039-nano-port-keil.md) 与 [基于 CubeMX 移植 RT-Thread Nano](docs/nano-port-cube/an0041-nano-port-cube.md) 。
 
-同时也提供 [下载 Nano 源码压缩包]() 的途径，方便在其他开发环境移植 RT-Thread Nano，如 [使用 IAR 移植 RT-Thread Nano](nano-port-iar/nano-port-iar.md)。
+同时也提供 [下载 Nano 源码压缩包](https://github.com/RT-Thread/rtthread-nano/archive/refs/heads/master.zip) 的途径，方便在其他开发环境移植 RT-Thread Nano，如 [基于 IAR 移植 RT-Thread Nano](docs/nano-port-iar/an0040-nano-port-iar.md)。
 
 **2、代码简单**
 
@@ -26,21 +26,25 @@ RT-Thread Nano 以软件包的方式集成在 Keil MDK 与 CubeMX 中，可以�
 
 **3、移植简单**
 
-由于 Nano 的极简特性，使 Nano 的移植过程变得极为简单。添加 Nano 源码到工程，就已完成 90% 的移植工作。并且在 Keil MDK 与 Cube MX 中还提供了 Nano 的软件包，可以一键下载加入到工程。以下是使用不同开发环境时，可以选择移植 Nano 的方法：
+由于 Nano 的极简特性，使 Nano 的移植过程变得极为简单。添加 Nano 源码到工程，就已完成 90% 的移植工作。
 
-- [使用 KEIL MDK 移植 RT-Thread Nano](nano-port-keil/nano-port-keil.md)
-- [使用 CubeMX 移植 RT-Thread Nano](nano-port-cube/nano-port-cube.md)
-- [使用 IAR 移植 RT-Thread Nano](nano-port-iar/nano-port-iar.md)
-- [移植 RT-Thread Nano 到 RISC-V](nano-port-gcc-riscv/nano-port-gcc-riscv.md) 
+在 Keil MDK 与 Cube MX 中还提供了 Nano 的软件包，可以一键下载加入到工程。另外，在 RT-Thread Studio 中可以基于 Nano 创建工程直接使用。以下是使用不同开发环境时，可以选择移植或使用 Nano 的方法：
+
+- [RT-Thread Nano 移植原理](docs/nano-port-principle/an0044-nano-port-principle.md)
+- [在 RT-Thread Studio 上使用 RT-Thread Nano](docs/nano-port-studio/an0047-nano-port-studio.md)
+- [基于 KEIL MDK 移植 RT-Thread Nano](docs/nano-port-keil/an0039-nano-port-keil.md)
+- [基于 CubeMX 移植 RT-Thread Nano](docs/nano-port-cube/an0041-nano-port-cube.md)
+- [基于 IAR 移植 RT-Thread Nano](docs/nano-port-iar/an0040-nano-port-iar.md)
+- [移植 RT-Thread Nano 到 RISC-V](docs/nano-port-gcc-riscv/an0042-nano-port-gcc-riscv.md)
 
 **4、使用简单**
 
 RT-Thread Nano 在使用上也非常简单，带给开发者友好的开发体验。
 
-- 易裁剪：Nano 的配置文件为 rtconfig.h，该文件中列出了内核中的所有宏定义，有些默认没有打开，如需使用，打开即可。具体的配置可见 Nano 版块的 [RT-Thread Nano 配置](nano-config/nano-config.md) 教程。
-- 易添加 FinSH 组件：[FinSH 组件](../../programming-manual/finsh/finsh.md) 可以很方便的在 Nano 上进行移植，而不再依赖 device 框架，只需要对接两个必要的函数即可完成 [FinSH 移植](finsh-port/finsh-port.md)。
+- 易裁剪：Nano 的配置文件为 rtconfig.h，该文件中列出了内核中的所有宏定义，有些默认没有打开，如需使用，打开即可。具体的配置可见 Nano 版块的 [RT-Thread Nano 配置](docs/nano-config/an0043-nano-config.md) 教程。
+- 易添加 FinSH 组件：FinSH 组件 可以很方便的在 Nano 上进行移植，而不再依赖 device 框架，只需要对接两个必要的函数即可完成 [FinSH 移植](docs/finsh-port/an0045-finsh-port.md)。
 - 自选驱动库：可以使用厂商提供的固件驱动库，如 ST 的 STD 库、HAL 库、LL 库等，可以自行选择。
-- 完善的文档：包含 [内核基础](../../programming-manual/basic/basic.md)、[线程管理 (例程)](../../programming-manual/thread/thread.md)、[时钟管理 (例程)](../../programming-manual/timer/timer.md)、[线程间同步 (例程)](../../programming-manual/ipc1/ipc1.md)、[线程间通信 (例程)](../../programming-manual/ipc2/ipc2.md)、[内存管理 (例程)](../../programming-manual/memory/memory.md)、[中断管理](../../programming-manual/interrupt/interrupt.md) ，以及 Nano 版块的移植教程。
+- 完善的文档：包含 内核基础、线程管理 (例程)、时钟管理 (例程)、线程间同步 (例程)、线程间通信 (例程)、内存管理 (例程)、中断管理，以及 Nano 版块的移植教程。
 
 ### 小巧
 
@@ -54,9 +58,13 @@ Nano 资源占用情况举例：在运行两个线程 (main 线程 + idle 线程
     Total ROM Size (Code + RO Data + RW Data)       4092 (   4.00kB)
 ```
 
-> 注：如果需要丰富的组件、驱动以及软件包等功能，则建议使用 [RT-Thread 完整版](../../index.md)。
+> 注：如果需要丰富的组件、驱动以及软件包等功能，则建议使用 [RT-Thread 完整版](https://www.rt-thread.org/document/site/#/rt-thread-version/rt-thread-standard/README)。
+
+### 基于 Nano 使用设备框架
+- [基于 nano 使用 PIN](docs/nano-ref/nano-device-pin/nano-device-pin.md)
+- [基于 nano 使用 I2C](docs/nano-ref/nano-device-i2c/nano-device-i2c.md)
+- [基于 nano 使用 ADC](docs/nano-ref/nano-device-adc/nano-device-adc.md)
 
 ### 开源免费（Apache 2.0）
 
 RT-Thread Nano 实时操作系统遵循 Apache 许可证 2.0 版本，实时操作系统内核及所有开源组件可以免费在商业产品中使用，不需要公布应用程序源码，没有潜在商业风险。
-
