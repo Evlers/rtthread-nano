@@ -28,6 +28,7 @@
  * 2019-03-14     armink       change version number to v3.1.3
  * 2019-06-12     armink       change version number to v3.1.4
  * 2020-05-14     armink       change version number to v3.1.5
+ * 2023-06-01     Evlers       change version number to v3.2.0
  */
 
 #ifndef __RT_DEF_H__
@@ -48,8 +49,8 @@ extern "C" {
 
 /* RT-Thread version information */
 #define RT_VERSION                      3L              /**< major version number */
-#define RT_SUBVERSION                   1L              /**< minor version number */
-#define RT_REVISION                     5L              /**< revise version number */
+#define RT_SUBVERSION                   2L              /**< minor version number */
+#define RT_REVISION                     0L              /**< revise version number */
 
 /* RT-Thread version */
 #define RTTHREAD_VERSION                ((RT_VERSION * 10000) + \
