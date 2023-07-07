@@ -17,10 +17,11 @@
  * 2016-11-26     armink       add password authentication
  * 2018-07-02     aozima       add custome prompt support.
  * 2023-06-01     Evlers       Add smart complete to the shell command line.
+ * 2023-07-07     Evlers       Move the finsh configuration to the rtconfig.h
  */
 
 #include <rthw.h>
-#include <finsh_config.h>
+#include <rtconfig.h>
 
 #ifdef RT_USING_FINSH
 

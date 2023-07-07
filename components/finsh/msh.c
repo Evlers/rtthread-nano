@@ -9,9 +9,10 @@
  * 2014-01-03     Bernard      msh can execute module.
  * 2017-07-19     Aubr.Cool    limit argc to RT_FINSH_ARG_MAX
  * 2023-06-01     Evlers       Add smart complete to the shell command line.
+ * 2023-07-07     Evlers       Move the finsh configuration to the rtconfig.h
  */
 #include <rtthread.h>
-#include <finsh_config.h>
+#include <rtconfig.h>
 
 #ifdef FINSH_USING_MSH
 

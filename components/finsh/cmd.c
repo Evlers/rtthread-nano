@@ -28,11 +28,12 @@
  * 2018-11-22     Jesven       list_thread add smp support
  * 2018-12-27     Jesven       Fix the problem that disable interrupt too long in list_thread
  *                             Provide protection for the "first layer of objects" when list_*
+ * 2023-07-07     Evlers       Move the finsh configuration to the rtconfig.h
  */
 
 #include <rthw.h>
 #include <rtthread.h>
-#include <finsh_config.h>
+#include <rtconfig.h>
 
 #ifdef RT_USING_FINSH
 

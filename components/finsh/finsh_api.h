@@ -6,11 +6,12 @@
  * Change Logs:
  * Date           Author       Notes
  * 2010-03-22     Bernard      first version
+ * 2023-07-07     Evlers       Move the finsh configuration to the rtconfig.h
  */
 #ifndef FINSH_API_H__
 #define FINSH_API_H__
 
-#include "finsh_config.h"
+#include "rtconfig.h"
 
 #if defined(_MSC_VER)
 #pragma section("FSymTab$f",read)
