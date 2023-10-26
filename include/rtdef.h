@@ -29,6 +29,7 @@
  * 2019-06-12     armink       change version number to v3.1.4
  * 2020-05-14     armink       change version number to v3.1.5
  * 2023-06-01     Evlers       change version number to v3.2.0
+ * 2023-10-26     Evlers       change version number to v3.3.1
  */
 
 #ifndef __RT_DEF_H__
