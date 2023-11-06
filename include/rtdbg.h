@@ -194,7 +194,7 @@ extern "C" {
 #define LOG_E(...)
 #endif
 
-#if (DBG_LEVEL >= DBG_ERROR)
+#if (DBG_LEVEL >= DBG_LOG)
 #define LOG_B(fmt, buf, len) dbg_log_hex("B", 0, fmt, buf, len)
 #else
 #define LOG_B(...)
